@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roomreservation.Controller.HelloController">
+   <left>
+      <AnchorPane prefHeight="456.0" prefWidth="216.0" style="-fx-background-color: #2f5299;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="450.0" fitWidth="239.0">
+               <image>
+                  <Image url="@../../../images/23-230859_iphone-wallpaper-singapore-skyscrapers-lake-dusk-merlion.jpg" />
+               </image>
+            </ImageView>
+         </children></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="470.0" prefWidth="373.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="nametext" alignment="CENTER" layoutX="157.0" layoutY="151.0" prefHeight="26.0" prefWidth="220.0" promptText="username" style="-fx-background-radius: 10px;" />
+            <PasswordField fx:id="pswtext" alignment="CENTER" layoutX="157.0" layoutY="197.0" prefHeight="26.0" prefWidth="220.0" promptText="psw" style="-fx-background-radius: 10px;" />
+            <Label layoutX="52.0" layoutY="200.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="usernamelab1" layoutX="52.0" layoutY="154.0" text="User Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="loginbtn" layoutX="131.0" layoutY="270.0" mnemonicParsing="false" onAction="#loginbtnOnAction" prefHeight="32.0" prefWidth="175.0" style="-fx-background-color: #2f5299; -fx-background-radius: 10px;" text="Login" textFill="#d4c6c6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Button>
+            <Button fx:id="cancelbtn" layoutX="128.0" layoutY="346.0" mnemonicParsing="false" onAction="#CreateAccountbtnOnAction" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: #2f5299; -fx-background-radius: 10px;" text=" Create Account" textFill="#d4c6c6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="loginMessageLable" alignment="CENTER" layoutX="81.0" layoutY="237.0" prefHeight="20.0" prefWidth="276.0" textFill="#e4361f">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="140.0" layoutY="313.0" text="Not registered. Register here " textFill="#411bc9" />
+            <Label layoutX="190.0" layoutY="87.0" text="Sign in" textFill="#224486">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="73.0" fitWidth="73.0" layoutX="182.0" layoutY="14.0">
+               <image>
+                  <Image url="@../../../images/external-login-buttons-others-inmotus-design.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="Admin" layoutX="130.0" layoutY="394.0" mnemonicParsing="false" onAction="#adminLogin" prefHeight="32.0" prefWidth="178.0" style="-fx-background-color: #2f5299; -fx-background-radius: 10px;" text="Admin Login" textFill="#d4c6c6">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

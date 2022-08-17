@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="bookingPane" prefHeight="650.0" prefWidth="900.0" style="-fx-background-color: #ecf0f1;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roomreservation.Controller.BookingController">
+    <children>
+        <Label layoutX="260.0" layoutY="15.0" text="Bookings" textFill="#2f5299">
+            <font>
+                <Font name="System Bold" size="26.0" />
+            </font>
+        </Label>
+        <AnchorPane layoutX="-3.0" prefHeight="650.0" prefWidth="257.0" style="-fx-background-color: #2f5299;">
+            <children>
+                <AnchorPane layoutX="20.0" layoutY="334.0" prefHeight="295.0" prefWidth="210.0" style="-fx-background-color: white;">
+                    <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Room No" />
+                        <Label layoutX="14.0" layoutY="50.0" text="AC / nonAC" />
+                        <Label layoutX="14.0" layoutY="84.0" text="Room Type" />
+                        <Label layoutX="14.0" layoutY="150.0" text="Price" />
+
+                        <Label fx:id="roomNum" layoutX="115.0" layoutY="14.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.rightAnchor="40.0" />
+                        <Label fx:id="Price" layoutX="124.0" layoutY="150.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.rightAnchor="40.0" />
+                        <Label fx:id="type" layoutX="124.0" layoutY="84.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.rightAnchor="40.0" />
+                        <Label layoutX="14.0" layoutY="118.0" text="Availability" />
+                        <Label fx:id="roomAvailability" layoutX="124.0" layoutY="118.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.rightAnchor="40.0" />
+                        <Label fx:id="acStatus" layoutX="117.0" layoutY="50.0" prefHeight="20.0" prefWidth="70.0" AnchorPane.rightAnchor="40.0" />
+                        <Label layoutX="12.0" layoutY="209.0" text="Total amount: " />
+                        <Label fx:id="total_amount" layoutX="107.0" layoutY="209.0" text="0.00" textFill="#d91616">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                  <Label layoutX="14.0" layoutY="180.0" text="Total Days" />
+                  <Label fx:id="total_day" layoutX="107.0" layoutY="180.0" text="0" textFill="#d91616">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                      <Button fx:id="revation_btn" layoutX="46.0" layoutY="239.0" mnemonicParsing="false" onAction="#reserveRoom" prefHeight="38.0" prefWidth="107.0" style="-fx-background-color: #192a56; -fx-background-radius: 10px;" text="Reserve" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font></Button>
+                    </children>
+                </AnchorPane>
+                <DatePicker fx:id="checkOutDate" layoutX="30.0" layoutY="260.0" onAction="#onActionOut" />
+                <ComboBox fx:id="rType" layoutX="34.0" layoutY="133.0" onAction="#selectedroom" prefWidth="150.0" promptText="Select Room Type" />
+                <Label layoutX="31.0" layoutY="235.0" text="Check out" textFill="#f2eded">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <DatePicker fx:id="checkInDate" layoutX="30.0" layoutY="196.0" onAction="#onActionIn" />
+                <Label layoutX="36.0" layoutY="170.0" text="Check in" textFill="#f2eded">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+                <Label layoutX="7.0" layoutY="303.0" text="Please select the room and reserved bellow" textFill="#f8f4f4">
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
+                </Label>
+            <Button fx:id="btn_previous" layoutX="-2.0" mnemonicParsing="false" onAction="#goHome" prefHeight="55.0" prefWidth="92.0" style="-fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="38.0" fitWidth="66.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/back-arrow.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            </children>
+        </AnchorPane>
+        <ScrollPane fx:id="scrollPane" layoutX="268.0" layoutY="84.0" prefHeight="520.0" prefWidth="594.0">
+            <content>
+                <GridPane fx:id="grid" hgap="20.0" prefHeight="150.0" prefWidth="150.0">
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" />
+                    </rowConstraints>
+                </GridPane>
+            </content>
+        </ScrollPane>
+        <Label alignment="CENTER" layoutX="3.0" layoutY="68.0" prefHeight="55.0" prefWidth="233.0" text="Please first insert the checkin&#10;checkout dates to check available&#10;rooms.&#10;" textFill="#f2eded" underline="true" wrapText="true">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+        <Label fx:id="uname" layoutX="756.0" layoutY="38.0" textFill="#25187c">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="nameLbl2" layoutX="788.0" layoutY="24.0" style="-fx-background-color: white; -fx-background-radius: 5px; -fx-padding: 5px;" text="Label">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font></Label>
+        <Label fx:id="in" layoutX="488.0" layoutY="51.0" prefHeight="17.0" prefWidth="92.0" text="Label" />
+        <Label fx:id="out" layoutX="699.0" layoutY="51.0" prefHeight="17.0" prefWidth="83.0" text="Label" />
+        <Label layoutX="393.0" layoutY="50.0" text="Checkin date:" />
+        <Label layoutX="612.0" layoutY="51.0" text="Checkout:" />
+    </children>
+</AnchorPane>

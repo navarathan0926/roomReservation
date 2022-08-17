@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="900.0" style="-fx-border-width: 5px; -fx-background-color: #0b0a26;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.roomreservation.Controller.ReservationController">
+    <children>
+        <AnchorPane layoutX="-11.0" layoutY="-1.0" prefHeight="650.0" prefWidth="900.0">
+            <children>
+            <ImageView fitHeight="720.0" fitWidth="911.0" layoutX="4.0" layoutY="66.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/hotel7.jpg" />
+               </image>
+            </ImageView>
+                <TableView fx:id="reservetbl" layoutX="108.0" layoutY="201.0" prefHeight="304.0" prefWidth="760.0">
+                    <columns>
+                        <TableColumn fx:id="reserveId" minWidth="30.0" prefWidth="100.00004577636719" text="Reservation_id" />
+                        <TableColumn fx:id="CustomerId" minWidth="30.0" prefWidth="88.79998779296875" text="Customer_id" />
+                        <TableColumn fx:id="rooms" minWidth="30.0" prefWidth="110.39996337890625" text="Room Number" />
+                        <TableColumn fx:id="total_days" minWidth="30.0" prefWidth="112.79998779296875" text="Check In" />
+                        <TableColumn fx:id="totalBill" minWidth="30.0" prefWidth="127.199951171875" text="Check Out" />
+                  <TableColumn fx:id="totalBill1" minWidth="30.0" prefWidth="90.4000244140625" text="No_of_Days" />
+                  <TableColumn fx:id="totalBill11" minWidth="30.0" prefWidth="131.2000732421875" text="Total Bill" />
+                    </columns>
+                </TableView>
+            <Button fx:id="CBooking" layoutX="419.0" layoutY="551.0" mnemonicParsing="false" onAction="#ConfirmBookingOnAction" prefHeight="46.0" prefWidth="188.0" style="-fx-background-color: #070a20; -fx-background-radius: 10px; -fx-border-color: white; -fx-border-radius: 10px; -fx-border-width: 2px;" text="Confirm Booking" textFill="#efefef">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font></Button>
+            <Button fx:id="backbtn" layoutX="14.0" layoutY="4.0" mnemonicParsing="false" onAction="#back" prefHeight="53.0" prefWidth="102.0" />
+              <Label alignment="CENTER" layoutX="208.0" layoutY="87.0" prefHeight="35.0" prefWidth="501.0" text="Reserved Booking" textFill="#1a043e">
+                  <font>
+                      <Font name="System Bold" size="26.0" />
+                  </font>
+              </Label>
+            <ImageView fitHeight="46.0" fitWidth="44.0" layoutX="40.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../images/back-arrow.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
