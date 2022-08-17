@@ -50,7 +50,7 @@ public class BookingController implements Initializable {
     private Label Price, in, out, roomAvailability;
 
     @FXML
-    private Label acStatus,total_amount, total_day, roomNum;
+    private Label acStatus,total_amount, total_day;
 
     @FXML
     private GridPane grid;
@@ -59,7 +59,7 @@ public class BookingController implements Initializable {
     private ScrollPane scrollPane;
 
     @FXML
-    private Label type, nameLbl2;
+    private Label type, nameLbl2, roomNum;
 
     @FXML
     private ComboBox<String> rType;

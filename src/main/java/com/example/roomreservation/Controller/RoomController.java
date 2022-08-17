@@ -30,7 +30,7 @@ public class RoomController {
         this.myListener = myListener;
         no.setText(String.valueOf(room.getRoomNo()));  // for show room number
         ac.setText(room.getAcStatus());
-        roomPane.setDisable(orderingBtn(room.getAvailability()));     // for disable the radio button
+        roomPane.setDisable(orderingBtn(room.getAvailability()));     // for disable already booked room pane
     }
 
 
